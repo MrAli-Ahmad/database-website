@@ -8,9 +8,7 @@
   <style>
     body {
       font-family: "Poppins", sans-serif;
-      /* Uncomment and set your own background image */
-      /* background: url('images/bak.jpg') no-repeat center center fixed;
-         background-size: cover; */
+      background: #f5f5f5;
     }
     .navbar {
       background-color: #1b1f3b;
@@ -31,6 +29,10 @@
       transform: translateY(-5px);
       box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
     }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
     footer {
       background: #1b1f3b;
       color: white;
@@ -42,7 +44,7 @@
     #askMeBtn {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      left: 20px;
       background-color: #1b1f3b;
       color: white;
       border: none;
@@ -56,7 +58,7 @@
       display: none;
       position: fixed;
       bottom: 70px;
-      right: 20px;
+      left: 20px;
       width: 350px;
       max-width: 90%;
       height: 500px;
@@ -119,11 +121,11 @@
     <div class="container">
       <h2 class="text-center fw-bold mb-5">Our Database Systems</h2>
       <div class="row g-4">
-        
+
         <!-- Product 1 -->
         <div class="col-md-4">
           <div class="card product-card">
-              <img src="https://theaim.ca/wp-content/uploads/2024/01/motorcycle-insurance.jpg" class="card-img-top" alt="Inventory Management System">
+            <img src="https://www.tyasuite.com/uploads/blog/cloud-based-inventory-management-software.png" class="card-img-top" alt="Inventory Management System">
             <div class="card-body text-center">
               <h5 class="card-title">Inventory Management System</h5>
               <p class="card-text">Track purchases, sales, and stock levels with detailed reporting and SQL Server integration.</p>
@@ -136,6 +138,7 @@
         <!-- Product 2 -->
         <div class="col-md-4">
           <div class="card product-card">
+            <img src="https://theaim.ca/wp-content/uploads/2024/01/motorcycle-insurance.jpg" class="card-img-top" alt="Vehicle Selling Database">
             <div class="card-body text-center">
               <h5 class="card-title">Vehicle Selling Database</h5>
               <p class="card-text">Complete motorcycle and rickshaw sales system with customer records and payment history.</p>
@@ -148,6 +151,7 @@
         <!-- Product 3 -->
         <div class="col-md-4">
           <div class="card product-card">
+            <img src="https://dubai-on.com/wp-content/uploads/2021/06/best-jewellers-in-dubai.jpg" class="card-img-top" alt="Jewelry Shop Management">
             <div class="card-body text-center">
               <h5 class="card-title">Jewelry Shop Management</h5>
               <p class="card-text">Manage gold jewelry sales, karat weight, and transaction history with secure backups.</p>
@@ -193,14 +197,14 @@
   </footer>
 
   <!-- Ask Me Button & Popup -->
-  <button id="askMeBtn">AI BOT</button>
+  <button id="askMeBtn">📨 Ask Me</button>
   <div id="askMeModal">
     <iframe id="JotFormIFrame" title="Customer Support"
       allowtransparency="true"
       allow="geolocation; microphone; camera; fullscreen"
       src="https://agent.jotform.com/0199e1688d677c24bceb37c63640c6f13904?embedMode=iframe&background=1&shadow=1">
     </iframe>
-    <button id="closeModal">X</button>
+    <button id="closeModal">×</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -218,15 +222,9 @@
       askMeModal.style.display = 'none';
     });
 
-    // Optional: close modal if clicked outside
     window.addEventListener('click', (e) => {
-      if (e.target === askMeModal) {
-        askMeModal.style.display = 'none';
-      }
+      if(e.target === askMeModal) askMeModal.style.display = 'none';
     });
   </script>
 </body>
 </html>
-
-
-
